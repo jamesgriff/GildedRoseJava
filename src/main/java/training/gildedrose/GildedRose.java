@@ -9,25 +9,18 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-            if (doesSellInChange(item)) {
-                updateItemSellIn(item);
-            }
-            if (doesQualityChange(item)) {
-                updateItemQuality(item);
-            }
+            updateItemSellIn(item);
+            updateItemQuality(item);
         }
     }
 
-    private boolean doesSellInChange(Item item) {
-        return !isGoldCoin(item);
-    }
-
     private void updateItemSellIn(Item item) {
-        item.sellIn = item.sellIn - 1;
-    }
-
-    private boolean doesQualityChange(Item item) {
-        return !isGoldCoin(item);
+        if (isGoldCoin(item)) {
+            // Gold Coins don't change their "sell-in" date
+        }
+        else {
+            item.sellIn = item.sellIn - 1;
+        }
     }
 
     private void updateItemQuality(Item item) {
@@ -36,6 +29,9 @@ class GildedRose {
 
         } else if (isBackstagePass(item)) {
             updateBackstagePassQuality(item);
+
+        } else if (isGoldCoin(item)) {
+            // Gold Coins don't change the "quality"
 
         } else {
             updateOtherItemQuality(item);
