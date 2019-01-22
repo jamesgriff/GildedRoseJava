@@ -21,39 +21,37 @@ class GildedRose {
     }
 
     private void updateItemQuality(Item item) {
-        if (isAgedBrie(item)) {
-            item.quality = item.quality + 1;
-
-        } else if (isBackstagePass(item)) {
-            if (item.sellIn <= 5) {
-                item.quality = item.quality + 3;
-            }
-            else if (item.sellIn <= 10) {
-                item.quality = item.quality + 2;
-            }
-            else {
-                item.quality = item.quality + 1;
-            }
-        }
-        else {
-            if (!isGoldCoin(item)) {
-                item.quality = item.quality - 1;
-            }
-        }
-
-        if (item.sellIn < 0) {
+        if (!isGoldCoin(item)) {
             if (isAgedBrie(item)) {
                 item.quality = item.quality + 1;
+
             } else if (isBackstagePass(item)) {
-                item.quality = 0;
-            } else {
-                if (!isGoldCoin(item)) {
+                if (item.sellIn <= 5) {
+                    item.quality = item.quality + 3;
+                }
+                else if (item.sellIn <= 10) {
+                    item.quality = item.quality + 2;
+                }
+                else {
+                    item.quality = item.quality + 1;
+                }
+            }
+            else {
+                item.quality = item.quality - 1;
+            }
+
+            if (item.sellIn < 0) {
+                if (isAgedBrie(item)) {
+                    item.quality = item.quality + 1;
+                } else if (isBackstagePass(item)) {
+                    item.quality = 0;
+                } else {
                     item.quality = item.quality - 1;
                 }
             }
-        }
 
-        limitQuality(item);
+            limitQuality(item);
+        }
     }
 
     private void limitQuality(Item item) {
