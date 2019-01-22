@@ -45,6 +45,9 @@ class GildedRose {
         if (hasSellByDatePassed(item)) {
             change = change * 2;
         }
+        if (isPremium(item)) {
+            change = change * 2;
+        }
 
         item.quality = item.quality + change;
     }
@@ -64,6 +67,10 @@ class GildedRose {
             } else {
                 change = 1;
             }
+
+            if (isPremium(item)) {
+                change = change * 2;
+            }
             item.quality = item.quality + change;
         }
     }
@@ -71,6 +78,9 @@ class GildedRose {
     private void updateOtherItemQuality(Item item) {
         int change = -1;
         if (hasSellByDatePassed(item)) {
+            change = change * 2;
+        }
+        if (isPremium(item)) {
             change = change * 2;
         }
 
@@ -90,15 +100,19 @@ class GildedRose {
         }
     }
 
+    private boolean isPremium(Item item) {
+        return item.name.contains("Premium");
+    }
+
     private boolean isAgedBrie(Item item) {
-        return item.name.equals("Aged Brie");
+        return item.name.contains("Aged Brie");
     }
 
     private boolean isBackstagePass(Item item) {
-        return item.name.equals("Backstage pass");
+        return item.name.contains("Backstage pass");
     }
 
     private boolean isGoldCoin(Item item) {
-        return item.name.equals("Gold coin");
+        return item.name.contains("Gold coin");
     }
 }

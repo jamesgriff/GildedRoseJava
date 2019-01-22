@@ -13,7 +13,11 @@ public class MasterTest {
                 new Item("Aged Brie", 40, 17),
                 new Item ("Backstage pass", 20, 1),
                 new Item ("Gold coin", 5, 4),
-                new Item ("Some other item", 5, 17)
+                new Item ("Some other item", 5, 17),
+                new Item("Premium Aged Brie", 40, 17),
+                new Item ("Premium Backstage pass", 20, 1),
+                new Item ("Premium Gold coin", 5, 4),
+                new Item ("Some other Premium item", 5, 17)
         };
 
         StringBuilder sb = new StringBuilder();
