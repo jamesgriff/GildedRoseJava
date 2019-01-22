@@ -25,37 +25,48 @@ class GildedRose {
 
     private void updateItemQuality(Item item) {
         if (isAgedBrie(item)) {
-            if (item.sellIn < 0) {
-                item.quality = item.quality + 2;
-            }
-            else {
-                item.quality = item.quality + 1;
-            }
+            updateAgedBrieQuality(item);
 
         } else if (isBackstagePass(item)) {
-            if (item.sellIn < 0) {
-                item.quality = 0;
-            }
-            else if (item.sellIn <= 5) {
-                item.quality = item.quality + 3;
-            }
-            else if (item.sellIn <= 10) {
-                item.quality = item.quality + 2;
-            }
-            else {
-                item.quality = item.quality + 1;
-            }
+            updateBackstagePassQuality(item);
 
-        }
-        else {
-            if (item.sellIn < 0) {
-                item.quality = item.quality - 2;
-            } else {
-                item.quality = item.quality - 1;
-            }
+        } else {
+            updateOtherItemQuality(item);
         }
 
         limitQuality(item);
+    }
+
+    private void updateAgedBrieQuality(Item item) {
+        if (item.sellIn < 0) {
+            item.quality = item.quality + 2;
+        }
+        else {
+            item.quality = item.quality + 1;
+        }
+    }
+
+    private void updateBackstagePassQuality(Item item) {
+        if (item.sellIn < 0) {
+            item.quality = 0;
+        }
+        else if (item.sellIn <= 5) {
+            item.quality = item.quality + 3;
+        }
+        else if (item.sellIn <= 10) {
+            item.quality = item.quality + 2;
+        }
+        else {
+            item.quality = item.quality + 1;
+        }
+    }
+
+    private void updateOtherItemQuality(Item item) {
+        if (item.sellIn < 0) {
+            item.quality = item.quality - 2;
+        } else {
+            item.quality = item.quality - 1;
+        }
     }
 
     private boolean qualityChanges(Item item) {
