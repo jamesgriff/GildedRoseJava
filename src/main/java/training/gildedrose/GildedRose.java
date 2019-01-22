@@ -40,8 +40,7 @@ class GildedRose {
     private void updateAgedBrieQuality(Item item) {
         if (item.sellIn < 0) {
             item.quality = item.quality + 2;
-        }
-        else {
+        } else {
             item.quality = item.quality + 1;
         }
     }
@@ -49,14 +48,14 @@ class GildedRose {
     private void updateBackstagePassQuality(Item item) {
         if (item.sellIn < 0) {
             item.quality = 0;
-        }
-        else if (item.sellIn <= 5) {
+
+        } else if (item.sellIn <= 5) {
             item.quality = item.quality + 3;
-        }
-        else if (item.sellIn <= 10) {
+
+        } else if (item.sellIn <= 10) {
             item.quality = item.quality + 2;
-        }
-        else {
+
+        } else {
             item.quality = item.quality + 1;
         }
     }
