@@ -11,8 +11,8 @@ public class MasterTest {
     public void outputIsEqualToInitialOutput() {
         Item[] items = {
                 new Item("Aged Brie", 40, 17),
-                new Item ("Backstage passes to a TAFKAL80ETC concert", 20, 1),
-                new Item ("Sulfuras, Hand of Ragnaros", 5, 4),
+                new Item ("Backstage pass", 20, 1),
+                new Item ("Gold coin", 5, 4),
                 new Item ("Some other item", 5, 17)
         };
 
