@@ -21,13 +21,13 @@ class GildedRose {
                     items[i].quality = items[i].quality + 1;
 
                     if (items[i].name.equals("Backstage pass")) {
-                        if (items[i].sellIn < 11) {
+                        if (items[i].sellIn < 12) {
                             if (items[i].quality < 50) {
                                 items[i].quality = items[i].quality + 1;
                             }
                         }
 
-                        if (items[i].sellIn < 6) {
+                        if (items[i].sellIn < 7) {
                             if (items[i].quality < 50) {
                                 items[i].quality = items[i].quality + 1;
                             }

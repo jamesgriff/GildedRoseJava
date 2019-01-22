@@ -61,67 +61,67 @@ Day 9:
 
 Day 10:
   Aged Brie: Quality 27, Sell In 30
-  Backstage pass: Quality 11, Sell In 10
+  Backstage pass: Quality 12, Sell In 10
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 2, Sell In -5
 
 Day 11:
   Aged Brie: Quality 28, Sell In 29
-  Backstage pass: Quality 13, Sell In 9
+  Backstage pass: Quality 14, Sell In 9
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -6
 
 Day 12:
   Aged Brie: Quality 29, Sell In 28
-  Backstage pass: Quality 15, Sell In 8
+  Backstage pass: Quality 16, Sell In 8
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -7
 
 Day 13:
   Aged Brie: Quality 30, Sell In 27
-  Backstage pass: Quality 17, Sell In 7
+  Backstage pass: Quality 18, Sell In 7
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -8
 
 Day 14:
   Aged Brie: Quality 31, Sell In 26
-  Backstage pass: Quality 19, Sell In 6
+  Backstage pass: Quality 20, Sell In 6
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -9
 
 Day 15:
   Aged Brie: Quality 32, Sell In 25
-  Backstage pass: Quality 21, Sell In 5
+  Backstage pass: Quality 23, Sell In 5
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -10
 
 Day 16:
   Aged Brie: Quality 33, Sell In 24
-  Backstage pass: Quality 24, Sell In 4
+  Backstage pass: Quality 26, Sell In 4
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -11
 
 Day 17:
   Aged Brie: Quality 34, Sell In 23
-  Backstage pass: Quality 27, Sell In 3
+  Backstage pass: Quality 29, Sell In 3
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -12
 
 Day 18:
   Aged Brie: Quality 35, Sell In 22
-  Backstage pass: Quality 30, Sell In 2
+  Backstage pass: Quality 32, Sell In 2
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -13
 
 Day 19:
   Aged Brie: Quality 36, Sell In 21
-  Backstage pass: Quality 33, Sell In 1
+  Backstage pass: Quality 35, Sell In 1
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -14
 
 Day 20:
   Aged Brie: Quality 37, Sell In 20
-  Backstage pass: Quality 36, Sell In 0
+  Backstage pass: Quality 38, Sell In 0
   Gold coin: Quality 4, Sell In 5
   Some other item: Quality 0, Sell In -15
 
