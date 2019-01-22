@@ -9,6 +9,10 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
+            if (!item.name.equals("Gold coin")) {
+                item.sellIn = item.sellIn - 1;
+            }
+
             if (!item.name.equals("Aged Brie")
                     && !item.name.equals("Backstage pass")) {
                 if (item.quality > 0) {
@@ -21,23 +25,19 @@ class GildedRose {
                     item.quality = item.quality + 1;
 
                     if (item.name.equals("Backstage pass")) {
-                        if (item.sellIn < 12) {
+                        if (item.sellIn < 11) {
                             if (item.quality < 50) {
                                 item.quality = item.quality + 1;
                             }
                         }
 
-                        if (item.sellIn < 7) {
+                        if (item.sellIn < 6) {
                             if (item.quality < 50) {
                                 item.quality = item.quality + 1;
                             }
                         }
                     }
                 }
-            }
-
-            if (!item.name.equals("Gold coin")) {
-                item.sellIn = item.sellIn - 1;
             }
 
             if (item.sellIn < 0) {
