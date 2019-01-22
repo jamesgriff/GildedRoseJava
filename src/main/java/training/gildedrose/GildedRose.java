@@ -10,8 +10,8 @@ class GildedRose {
     public void updateQuality() {
         for (Item item : items) {
             updateItemSellIn(item);
-
-            if (qualityChanges(item)) {
+            
+            if (doesQualityChange(item)) {
                 updateItemQuality(item);
             }
         }
@@ -21,6 +21,10 @@ class GildedRose {
         if (!isGoldCoin(item)) {
             item.sellIn = item.sellIn - 1;
         }
+    }
+
+    private boolean doesQualityChange(Item item) {
+        return !isGoldCoin(item);
     }
 
     private void updateItemQuality(Item item) {
@@ -66,10 +70,6 @@ class GildedRose {
         } else {
             item.quality = item.quality - 1;
         }
-    }
-
-    private boolean qualityChanges(Item item) {
-        return !isGoldCoin(item);
     }
 
     private void limitQuality(Item item) {
