@@ -15,16 +15,16 @@ class GildedRose {
     }
 
     private void updateItemSellIn(Item item) {
-        if (!item.name.equals("Gold coin")) {
+        if (!isGoldCoin(item)) {
             item.sellIn = item.sellIn - 1;
         }
     }
 
     private void updateItemQuality(Item item) {
-        if (!item.name.equals("Aged Brie")
-                && !item.name.equals("Backstage pass")) {
+        if (!isAgedBrie(item)
+                && !isBackstagePass(item)) {
             if (item.quality > 0) {
-                if (!item.name.equals("Gold coin")) {
+                if (!isGoldCoin(item)) {
                     item.quality = item.quality - 1;
                 }
             }
@@ -32,7 +32,7 @@ class GildedRose {
             if (item.quality < 50) {
                 item.quality = item.quality + 1;
 
-                if (item.name.equals("Backstage pass")) {
+                if (isBackstagePass(item)) {
                     if (item.sellIn <= 10) {
                         if (item.quality < 50) {
                             item.quality = item.quality + 1;
@@ -49,10 +49,10 @@ class GildedRose {
         }
 
         if (item.sellIn < 0) {
-            if (!item.name.equals("Aged Brie")) {
-                if (!item.name.equals("Backstage pass")) {
+            if (!isAgedBrie(item)) {
+                if (!isBackstagePass(item)) {
                     if (item.quality > 0) {
-                        if (!item.name.equals("Gold coin")) {
+                        if (!isGoldCoin(item)) {
                             item.quality = item.quality - 1;
                         }
                     }
@@ -65,5 +65,17 @@ class GildedRose {
                 }
             }
         }
+    }
+
+    private boolean isAgedBrie(Item item) {
+        return item.name.equals("Aged Brie");
+    }
+
+    private boolean isBackstagePass(Item item) {
+        return item.name.equals("Backstage pass");
+    }
+
+    private boolean isGoldCoin(Item item) {
+        return item.name.equals("Gold coin");
     }
 }
